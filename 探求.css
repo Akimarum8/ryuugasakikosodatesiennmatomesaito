@@ -53,3 +53,25 @@ img {
     height: auto;
     border-radius: 8px;
 }
+
+/* スマホ用 */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

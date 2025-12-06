@@ -75,3 +75,39 @@ img {
     height: auto;
   }
 }
+/* 全デバイス共通 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 画像は画面幅に合わせて縮む */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* スマホ対応：幅600px以下 */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+

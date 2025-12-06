@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://akimarum8.github.io/ryuugasakikosodatesiennmatomesaito/sitemap.xml

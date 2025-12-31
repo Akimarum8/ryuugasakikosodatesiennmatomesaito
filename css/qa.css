@@ -137,6 +137,26 @@ main {
   text-decoration: underline;
 }
 
+/* ---------- トップに戻る ---------- */
+.back-top {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.back-top a {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #4a90e2;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-top a:hover {
+  background: #2c5aa0;
+}
+
 /* ===== フッター ===== */
 footer {
   background: #e9eef6;
@@ -165,3 +185,4 @@ footer a {
   }
 
 }
+

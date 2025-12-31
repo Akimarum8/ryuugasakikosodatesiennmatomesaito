@@ -1,0 +1,132 @@
+/* =========================
+   senior.css
+   高齢者への支援ページ専用CSS
+========================= */
+
+/* ===== 全体設定 ===== */
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* ===== ヘッダー ===== */
+.sub-header {
+  background: linear-gradient(135deg, #4b79a1, #2c5aa0);
+  color: #fff;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.sub-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 0.05em;
+}
+
+.sub-header p {
+  margin-top: 12px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ===== メイン ===== */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== 各コンテンツ枠 ===== */
+.content-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 36px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* 見出し */
+.content-box h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  padding-left: 12px;
+  border-left: 6px solid #2c5aa0;
+  color: #2c5aa0;
+}
+
+/* 本文 */
+.content-box p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+/* 出典リンク */
+.source {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  background: #f0f4fa;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.source a {
+  color: #2c5aa0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.source a:hover {
+  text-decoration: underline;
+}
+
+/* ===== トップに戻る ===== */
+.back-top {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+.back-top a {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #2c5aa0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.back-top a:hover {
+  background: #1f437a;
+}
+
+/* ===== フッター ===== */
+footer {
+  background: #2c5aa0;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===== スマホ対応 ===== */
+@media screen and (max-width: 600px) {
+  .sub-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .content {
+    margin: 24px auto;
+  }
+
+  .content-box {
+    padding: 20px;
+  }
+
+  .content-box h2 {
+    font-size: 1.2rem;
+  }
+}

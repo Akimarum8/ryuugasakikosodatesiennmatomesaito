@@ -1,0 +1,139 @@
+/* =========================
+   support.css
+   子育て支援ページ専用
+   ========================= */
+
+/* 共通設定 */
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  background-color: #f4f6fb;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* ヘッダー */
+.sub-header {
+  background: linear-gradient(135deg, #2c5aa0, #4f7fd4);
+  color: #fff;
+  text-align: center;
+  padding: 48px 20px;
+}
+
+.sub-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.sub-header p {
+  margin-top: 12px;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* メインコンテンツ */
+.content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* セクション共通 */
+.content-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* 見出し */
+.content-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  padding-left: 14px;
+  border-left: 6px solid #2c5aa0;
+  color: #1f3f73;
+}
+
+/* 説明文 */
+.content-box p {
+  margin-bottom: 16px;
+}
+
+/* 情報リスト */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.info-list li {
+  padding: 12px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 0.95rem;
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+/* 公式情報リンク */
+.source {
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+.source a {
+  color: #2c5aa0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.source a:hover {
+  color: #1f3f73;
+}
+
+/* トップに戻る */
+.back-top {
+  text-align: center;
+  margin: 60px 0 20px;
+}
+
+.back-top a {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #2c5aa0;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-top a:hover {
+  background: #244b85;
+}
+
+/* フッター */
+footer {
+  background: #eef2fb;
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+  .sub-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .content-box {
+    padding: 24px;
+  }
+
+  .content-box h2 {
+    font-size: 1.3rem;
+  }
+}

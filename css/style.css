@@ -1,0 +1,291 @@
+/* ===== 全体 ===== */
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background-color: #f4f9f6;
+  color: #333;
+}
+
+/* ===== ヘッダー ===== */
+.top-header {
+  position: relative;        /* ← これが超重要 */
+  width: 100%;
+  height: 100vh;             /* 画面いっぱい */
+  overflow: hidden;
+}
+
+/* 背景画像（ずれ防止） */
+.top-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* テキスト全体（位置を固定） */
+.top-text {
+  position: absolute;
+  top: 30%;                  /* ← ここで縦位置を固定 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+.top-text1 {
+  position: absolute;
+  top: 45%;                  /* ← ここで縦位置を固定 */
+  right: 23%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* タイトル文字（自動サイズ調整） */
+.top-text h1 {
+  font-size: clamp(1.4rem, 4vw, 2.6rem);
+  font-weight: bold;
+  color: #2f3a2f;
+  margin-bottom: 8px;
+}
+
+/* 「高校生が作りました！」（安定配置） */
+.made-by {
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  font-weight: bold;
+  color: #4b6f44;
+}
+
+/* ===== メイン ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+/* カード一覧 */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 30px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* カード共通 */
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 正方形を維持 */
+  border-radius: 16px;
+  overflow: hidden;     /* はみ出し防止 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* カード全体をリンクとして安定させる */
+  display: block;              /* ← 超重要 */
+  text-decoration: none;       /* リンク下線消す */
+  color: inherit;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2f3a2f;
+  line-height: 1.2;
+}
+
+
+.card span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  background: rgba(255,255,255,0.8);
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.card-sub {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.2;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0 12px;
+  background: rgba(255, 255, 255, 0.88);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* ← ここが重要 */
+  z-index: 2; /* ← これで画像より前 */
+}
+
+/* 各カードの背景画像 */
+/* 1 子育て支援 */
+.card-support {
+  background-image: url("../images/support.png");
+  border-top-color: #f4a7b9;
+}
+
+/* 2 高齢者への支援 */
+.card-senior {
+  background-image: url("../images/senior.png");
+  border-top-color: #8bcf9c;
+}
+
+/* 3 イベント情報 */
+.card-event {
+  background-image: url("../images/event.png");
+  border-top-color: #f6b26b;
+}
+
+/* 4 施設情報 */
+.card-facility {
+  background-image: url("../images/facility.png");
+  border-top-color: #8ecae6;
+}
+
+/* 5 相談窓口 */
+.card-consult {
+  background-image: url("../images/consult.png");
+  border-top-color: #6c8ebf;
+}
+
+/* 6 子育て支援アプリ */
+.card-app {
+  background-image: url("../images/app.png");
+  border-top-color: #b6d957;
+}
+
+/* 7 Q&A */
+.card-qa {
+  background-image: url("../images/qa.png");
+  border-top-color: #c9b6e4;
+}
+
+/* 8 アンケート */
+.card-survey {
+  background-image: url("../images/survey.png");
+  border-top-color: #b7b7b7;
+}
+
+/* 9 公式サイト */
+.card-official {
+  background-image: url("../images/official.png");
+  border-top-color: #76c7c0;
+}
+
+.sub-header {
+  background: #f4f8f2;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sub-header h1 {
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  margin-bottom: 8px;
+}
+
+.sub-header p {
+  color: #555;
+}
+/* サブページ用・追加分 */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.content-box h2 {
+  margin-bottom: 10px;
+  color: #2f3a2f;
+}
+
+/* ページトップへ戻るボタン */
+.back-top {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.back-top a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4b6f44;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-top a:hover {
+  background: #3a5a34;
+}
+
+/* ===== フッター ===== */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 600px) {
+
+  .hero-header {
+    height: 65vh;
+    min-height: 420px;
+  }
+
+  .hero-text-main h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text-main p {
+    font-size: 1rem;
+  }
+
+  .hero-text-sub {
+    right: 50%;
+    transform: translateX(50%);
+    top: 45%;
+    font-size: 0.95rem;
+  }
+  
+  .card {
+    height: 160px;
+    border-radius: 14px;
+  }
+
+}

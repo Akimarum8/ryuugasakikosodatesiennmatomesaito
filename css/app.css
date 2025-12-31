@@ -1,0 +1,124 @@
+/* =========================
+   app.css
+   子育て支援アプリページ専用
+========================= */
+
+/* ---------- 全体 ---------- */
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  background-color: #f6f9fc;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* ---------- ヘッダー ---------- */
+.sub-header {
+  background: linear-gradient(135deg, #6fb1fc, #a1d8ff);
+  color: #fff;
+  padding: 48px 16px;
+  text-align: center;
+}
+
+.sub-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.sub-header p {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* ---------- メイン ---------- */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+/* ---------- セクション共通 ---------- */
+.content-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.content-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  padding-left: 14px;
+  border-left: 6px solid #4a90e2;
+  color: #2c5aa0;
+}
+
+.content-box p {
+  margin-bottom: 16px;
+}
+
+/* ---------- リスト ---------- */
+.content-box ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.content-box li {
+  margin-bottom: 10px;
+}
+
+/* ---------- リンク ---------- */
+a {
+  color: #2c5aa0;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #1f3f73;
+}
+
+/* ---------- トップに戻る ---------- */
+.back-top {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.back-top a {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #4a90e2;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-top a:hover {
+  background: #2c5aa0;
+}
+
+/* ---------- フッター ---------- */
+footer {
+  background: #eef3f9;
+  padding: 20px 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ---------- スマホ対応 ---------- */
+@media (max-width: 600px) {
+
+  .sub-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .content-box {
+    padding: 20px;
+  }
+
+  .content-box h2 {
+    font-size: 1.3rem;
+  }
+}

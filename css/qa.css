@@ -1,0 +1,167 @@
+/* ===== 基本設定 ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* ===== ヘッダー ===== */
+header {
+  background: linear-gradient(135deg, #2c5aa0, #4a7bd0);
+  color: #fff;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+/* ===== ナビ（カテゴリ） ===== */
+.qa-nav {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.qa-nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  gap: 16px;
+}
+
+.qa-nav a {
+  text-decoration: none;
+  color: #2c5aa0;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #eef3fb;
+  transition: background 0.2s;
+}
+
+.qa-nav a:hover {
+  background: #dbe6f8;
+}
+
+/* ===== メイン ===== */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/* ===== セクション ===== */
+.qa-section {
+  margin-bottom: 64px;
+}
+
+.qa-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  padding-left: 14px;
+  border-left: 6px solid #2c5aa0;
+  background: linear-gradient(to right, #eef3fb, transparent);
+}
+
+/* ===== Q&Aカード ===== */
+.qa-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Qタイトル */
+.qa-box h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #2c5aa0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Q番号を強調 */
+.qa-box h3::before {
+  content: "Q";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #2c5aa0;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* 回答文 */
+.qa-box p {
+  margin: 12px 0 0;
+}
+
+/* ===== 出典 ===== */
+.source {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  background: #f0f4fa;
+  padding: 10px 14px;
+  border-left: 4px solid #2c5aa0;
+  border-radius: 8px;
+}
+
+.source a {
+  color: #2c5aa0;
+  text-decoration: underline;
+}
+
+/* ===== フッター ===== */
+footer {
+  background: #e9eef6;
+  padding: 32px 16px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: #2c5aa0;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .qa-box {
+    padding: 20px;
+  }
+
+  .qa-box h3 {
+    font-size: 1.05rem;
+  }
+
+}

@@ -263,29 +263,55 @@ body {
 /* ===== スマホ対応 ===== */
 @media (max-width: 600px) {
 
-  .hero-header {
-    height: 65vh;
+  /* ヘッダー全体 */
+  .top-header {
+    height: 70vh;       /* 100vhは使わない */
     min-height: 420px;
   }
 
-  .hero-text-main h1 {
-    font-size: 2rem;
+  /* メインタイトル */
+  .top-text {
+    top: 35%;
   }
 
-  .hero-text-main p {
-    font-size: 1rem;
+  .top-text h1 {
+    font-size: 1.6rem;
   }
 
-  .hero-text-sub {
+  /* 「高校生が作りました！」 */
+  .made-by {
+    font-size: 0.9rem;
+  }
+
+  /* サブテキスト */
+  .top-text1 {
+    top: 50%;
     right: 50%;
-    transform: translateX(50%);
-    top: 45%;
-    font-size: 0.95rem;
+    transform: translate(50%, -50%);
+    font-size: 0.9rem;
   }
-  
+
+  /* カード一覧 */
+  .cards {
+    padding: 20px 10px;
+    gap: 14px;
+  }
+
+  /* カード（高さ指定は消す） */
   .card {
-    height: 160px;
-    border-radius: 14px;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+  }
+
+  /* カード文字 */
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-sub {
+    font-size: 0.7rem;
   }
 
 }
+
+

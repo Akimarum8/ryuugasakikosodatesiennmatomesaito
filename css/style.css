@@ -263,31 +263,31 @@ body {
 /* ===== スマホ対応 ===== */
 @media (max-width: 600px) {
 
-  /* ヘッダー全体 */
+  /* トップヘッダー */
   .top-header {
-    height: 70vh;       /* 100vhは使わない */
-    min-height: 420px;
+    height: 55vh;        /* ← スマホに最適 */
+    min-height: 320px;   /* ← 小さくなりすぎ防止 */
   }
 
   /* メインタイトル */
   .top-text {
-    top: 35%;
+    top: 40%;
   }
 
   .top-text h1 {
-    font-size: 1.6rem;
-  }
-
-  /* 「高校生が作りました！」 */
-  .made-by {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
   }
 
   /* サブテキスト */
   .top-text1 {
-    top: 50%;
+    top: 55%;
     right: 50%;
     transform: translate(50%, -50%);
+    font-size: 0.85rem;
+  }
+
+  /* 「高校生が作りました！」 */
+  .made-by {
     font-size: 0.9rem;
   }
 
@@ -313,5 +313,3 @@ body {
   }
 
 }
-
-

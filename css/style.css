@@ -281,14 +281,15 @@ body {
   }
 
   /* 「高校生が作りました」だけ個別に調整 */
-  .made-by {
-    position: static;        /* ← absolute解除（最重要） */
-    margin-top: 10px;
-    font-size: 0.85rem;
-    line-height: 1.4;
-    text-align: center;
-    white-space: normal;     /* 折り返し許可 */
-  }
+.top-text1 {
+  position: absolute;
+  top: 45%;                  /* ← ここで縦位置を固定 */
+  right: 37%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
 
   .top-text h1 {
     font-size: 1.3rem;
@@ -323,6 +324,7 @@ body {
   }
 
 }
+
 
 
 

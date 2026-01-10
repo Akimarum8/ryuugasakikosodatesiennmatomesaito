@@ -290,17 +290,14 @@ body {
   width: 90%;
   max-width: 800px;
 }
-
-  .top-text h1 {
-    font-size: 1.3rem;
-  }
-
-  .top-text1 {
-    top: 55%;
-    right: 5%;
-    transform: translate(50%, -50%);
-    font-size: 0.8rem;
-  }
+.made-by {
+  position: static;        /* ← absolute解除（最重要） */
+  margin-top: 10px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;     /* 折り返し許可 */
+}
 
   /* カード一覧 */
   .cards {
@@ -324,6 +321,7 @@ body {
   }
 
 }
+
 
 
 

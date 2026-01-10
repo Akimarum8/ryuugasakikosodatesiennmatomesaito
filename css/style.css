@@ -18,19 +18,19 @@
 /* ===== サイト説明（画像下・1行） ===== */
 .top-text {
   position: absolute;
-  top: 18px;
+  top: 32%;                /* ← ここが超重要 */
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 
 .top-text p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  white-space: nowrap;       /* ← 1行固定 */
   color: #2f3a2f;
+  white-space: nowrap;
 }
 
 /* ===== 吹き出し内：高校生が作りました ===== */
@@ -282,6 +282,7 @@
     padding: 0 16px;
   }
 }
+
 
 
 

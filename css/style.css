@@ -18,7 +18,7 @@
 /* ===== サイト説明（画像下・1行） ===== */
 .top-text {
   position: absolute;
-  top: 32%;                /* ← ここが超重要 */
+  top: 25%;                /* ← ここが超重要 */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -282,6 +282,7 @@
     padding: 0 16px;
   }
 }
+
 
 
 

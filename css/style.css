@@ -27,17 +27,17 @@ body {
 /* テキスト全体（位置を固定） */
 .top-text {
   position: absolute;
-  top: 30%;                  /* ← ここで縦位置を固定 */
+  top: 40%;                  /* ← ここで縦位置を固定 */
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 90%;
+  width: 88%;
   max-width: 800px;
 }
 .top-text1 {
   position: absolute;
   top: 45%;                  /* ← ここで縦位置を固定 */
-  right: 37%;
+  right: 40%;
   transform: translate(50%, -50%);
   text-align: center;
   width: 90%;
@@ -307,6 +307,7 @@ body {
     white-space: normal;
   }
 }
+
 
 
 

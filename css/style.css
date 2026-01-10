@@ -1,72 +1,47 @@
-/* ===== 全体 ===== */
-body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  background-color: #f4f9f6;
-  color: #333;
-}
-
 /* ===== トップヘッダー ===== */
 .top-header {
   position: relative;
   width: 100%;
-  height: 420px;        /* ← PC基準 */
-  /*max-height: 520px;*/
+  height: 420px; /* PC基準 */
   overflow: hidden;
+  background-color: #f4f9f6;
 }
 
-/* 背景画像（ずれ防止） */
+/* 背景画像 */
 .top-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
-  background-color: #f4f9f6;
 }
 
-/* テキスト全体（位置を固定） */
+/* ===== サイト説明（画像下・1行） ===== */
 .top-text {
   position: absolute;
-  top: 25%;
+  bottom: 18px;              /* 画像の下側に固定 */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
-  margin-top: 12px;
+}
+
+.top-text p {
+  margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
-  white-space: nowrap;   /* ← 1行にする */
-}
-
-.top-text1 {
-  position: absolute;
-  top: 50%;                  /* ← ここで縦位置を固定 */
-  right: auto;
-  left: 50%
-  transform: translate(50%, -50%);
-  text-align: center;
-  max-width: 900px;
-}
-
-/* タイトル文字（自動サイズ調整） */
-.top-text h1 {
-  top: 25%;
-  left: 50%;
-  font-size: clamp(1.4rem, 4vw, 2.6rem);
-  font-weight: bold;
+  white-space: nowrap;       /* ← 1行固定 */
   color: #2f3a2f;
-  margin-bottom: 8px;
 }
 
-/* 「高校生が作りました！」（安定配置） */
+/* ===== 吹き出し内：高校生が作りました ===== */
 .made-by {
-  font-size: 1rem;
-  color: #4b6f44;
   position: absolute;
   right: 10%;
-  top: 38%;
-  width: 320px;
+  top: 36%;
+  width: 280px;
   text-align: center;
+  font-size: 1rem;
+  color: #4b6f44;
 }
 
 /* ===== メイン ===== */
@@ -273,41 +248,38 @@ body {
   color: #666;
 }
 
-/* ===== スマホ時：トップヘッダー完全修正版 ===== */
+/* ===== スマホ対応 ===== */
 @media (max-width: 600px) {
 
-  /* ヘッダーの高さを抑える */
+  /* ヘッダー高さを抑える */
   .top-header {
-    height: 70vh;
-    min-height: 420px;
+    height: auto;
   }
 
-  /* 文字エリアを通常レイアウトに戻す */
-  .top-text,
-  .top-text1 {
-    position: static;       /* ← absolute完全解除 */
+  .top-image {
+    height: auto;
+  }
+
+  /* 画像下テキスト：通常配置 */
+  .top-text {
+    position: static;
     transform: none;
-    width: 100%;
-    max-width: none;
-    margin: 0;
+    margin: 12px 0;
     padding: 0 16px;
-    text-align: center;
   }
 
-
-
-  /* タイトル */
-  .top-text h1 {
-    font-size: 1.4rem;
-    line-height: 1.4;
+  .top-text p {
+    font-size: 1rem;
+    white-space: normal;   /* スマホは改行OK */
   }
 
-  /* 高校生が作りました */
+  /* 高校生が作りました：吹き出し下に自然配置 */
   .made-by {
     position: static;
+    width: 100%;
     margin-top: 8px;
     font-size: 0.85rem;
-    white-space: normal;
+    padding: 0 16px;
   }
 }
 

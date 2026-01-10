@@ -15,12 +15,6 @@ body {
   overflow: hidden;
 }
 
- .top-text-wrapper {
-    position: absolute;
-    bottom: 12%;
-
-  }
-
 /* 背景画像（ずれ防止） */
 .top-image {
   width: 100%;
@@ -63,6 +57,13 @@ body {
   font-size: clamp(0.8rem, 2.5vw, 1.2rem);
   font-weight: bold;
   color: #4b6f44;
+    position: absolute;
+  top: 45%;                  /* ← ここで縦位置を固定 */
+  right: 37%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
 }
 
 /* ===== メイン ===== */
@@ -312,5 +313,6 @@ body {
     white-space: normal;
   }
 }
+
 
 

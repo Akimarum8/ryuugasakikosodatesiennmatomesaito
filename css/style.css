@@ -1,46 +1,63 @@
+/* ===== 全体 ===== */
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background-color: #f4f9f6;
+  color: #333;
+}
+
 /* ===== トップヘッダー ===== */
 .top-header {
   position: relative;
   width: 100%;
-  height: 420px; /* PC基準 */
+  height: 420px;        /* ← PC基準 */
+  /*max-height: 520px;*/
   overflow: hidden;
-  background-color: #f4f9f6;
 }
 
-/* 背景画像 */
+
+/* 背景画像（ずれ防止） */
 .top-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
+  background-color: #f4f9f6;
 }
 
-/* ===== サイト説明（画像下・1行） ===== */
+
+/* テキスト全体（位置を固定） */
 .top-text {
   position: absolute;
-  top: 25%;                /* ← ここが超重要 */
+  top: 30%;                  /* ← ここで縦位置を固定 */
   left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  width: 90%;
+  max-width: 800px;
 }
-
-.top-text p {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #2f3a2f;
-  white-space: nowrap;
-}
-
-/* ===== 吹き出し内：高校生が作りました ===== */
-.made-by {
+.top-text1 {
   position: absolute;
-  right: 40%;
-  top: 38%;
-  width: 280px;
+  top: 45%;                  /* ← ここで縦位置を固定 */
+  right: 37%;
+  transform: translate(50%, -50%);
   text-align: center;
-  font-size: 1rem;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* タイトル文字（自動サイズ調整） */
+.top-text h1 {
+  font-size: clamp(1.4rem, 4vw, 2.6rem);
+  font-weight: bold;
+  color: #2f3a2f;
+  margin-bottom: 8px;
+}
+
+/* 「高校生が作りました！」（安定配置） */
+.made-by {
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  font-weight: bold;
   color: #4b6f44;
 }
 
@@ -251,47 +268,51 @@
 /* ===== スマホ対応 ===== */
 @media (max-width: 600px) {
 
-  /* ヘッダー高さを抑える */
   .top-header {
-    height: auto;
+    height: 260px;     /* ← スマホでちょうど良い */
+    max-height: none;
   }
 
-  .top-image {
-    height: auto;
-  }
-
-  /* 画像下テキスト：通常配置 */
   .top-text {
-    position: static;
-    transform: none;
-    margin: 12px 0;
-    padding: 0 16px;
+    top: 38%;
   }
 
-  .top-text p {
-    font-size: 1rem;
-    white-space: normal;   /* スマホは改行OK */
+  .top-text h1 {
+    font-size: 1.3rem;
   }
 
-  /* 高校生が作りました：吹き出し下に自然配置 */
+  .top-text1 {
+    top: 55%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 0.8rem;
+  }
+
+  /* 「高校生が作りました！」 */
   .made-by {
-    position: static;
-    width: 100%;
-    margin-top: 8px;
-    font-size: 0.85rem;
-    padding: 0 16px;
+    font-size: 0.9rem;
   }
+
+  /* カード一覧 */
+  .cards {
+    padding: 20px 10px;
+    gap: 14px;
+  }
+
+  /* カード（高さ指定は消す） */
+  .card {
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+  }
+
+  /* カード文字 */
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-sub {
+    font-size: 0.7rem;
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

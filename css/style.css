@@ -264,66 +264,46 @@ body {
   color: #666;
 }
 
-/* ===== スマホ対応 ===== */
+/* ===== スマホ時：トップヘッダー完全修正版 ===== */
 @media (max-width: 600px) {
 
+  /* ヘッダーの高さを抑える */
   .top-header {
-    height: 260px;     /* ← スマホでちょうど良い */
-    max-height: none;
+    height: 70vh;
+    min-height: 420px;
   }
 
-
-  /* トップ文字全体を中央に固定 */
-  .top-text {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  /* 文字エリアを通常レイアウトに戻す */
+  .top-text,
+  .top-text1 {
+    position: static;       /* ← absolute完全解除 */
+    transform: none;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 16px;
+    text-align: center;
   }
 
-  /* 「高校生が作りました」だけ個別に調整 */
-.top-text1 {
-  position: absolute;
-  top: 45%;                  /* ← ここで縦位置を固定 */
-  right: 37%;
-  transform: translate(50%, -50%);
-  text-align: center;
-  width: 90%;
-  max-width: 800px;
+  /* 文字全体を画像の下に重ねる */
+  .top-text-wrapper {
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+  }
+
+  /* タイトル */
+  .top-text h1 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  /* 高校生が作りました */
+  .made-by {
+    position: static;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    white-space: normal;
+  }
 }
-.made-by {
-  position: static;        /* ← absolute解除（最重要） */
-  margin-top: 10px;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  text-align: center;
-  white-space: normal;     /* 折り返し許可 */
-}
-
-  /* カード一覧 */
-  .cards {
-    padding: 20px 10px;
-    gap: 14px;
-  }
-
-  /* カード（高さ指定は消す） */
-  .card {
-    aspect-ratio: 1 / 1;
-    border-radius: 12px;
-  }
-
-  /* カード文字 */
-  .card-title {
-    font-size: 0.9rem;
-  }
-
-  .card-sub {
-    font-size: 0.7rem;
-  }
-
-}
-
-
-
-
-
-

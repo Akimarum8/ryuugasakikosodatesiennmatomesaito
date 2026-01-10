@@ -291,13 +291,7 @@ body {
     text-align: center;
   }
 
-  /* 文字全体を画像の下に重ねる */
-  .top-text-wrapper {
-    position: absolute;
-    bottom: 12%;
-    left: 0;
-    right: 0;
-  }
+
 
   /* タイトル */
   .top-text h1 {
@@ -313,6 +307,7 @@ body {
     white-space: normal;
   }
 }
+
 
 
 

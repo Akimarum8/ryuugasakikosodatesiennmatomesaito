@@ -1,123 +1,318 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>龍ヶ崎市の子育て・暮らし情報まとめ</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="google-site-verification" content="kXhlitH_dcohANC1-DoxXyIJvyZsWH7sYHFY6qUqNnY" />
-</head>
-<body>
+/* ===== 全体 ===== */
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background-color: #f4f9f6;
+  color: #333;
+}
 
-  <!-- ===== ヘッダー ===== -->
- <header class="top-header">
-  <img src="images/top-illustration.png" alt="トップイラスト" class="top-image">
-
-  <div class="top-text">
-    <h1>龍ケ崎市の子育て・暮らし情報まとめサイト</h1>
-  </div>
-  <div class="top-text1">
-    <div class="made-by">
-      <p>高校生が作りました</p>
-    </div>
-  </div>
-</header>
-
-  <!-- ===== メイン ===== -->
-  <main class="container">
-
-    <section class="cards">
-
-      <a href="support.html" class="card card-support">
-        <div class="card-text">
-         <div class="card-title">子育て支援</div>
-         <div class="card-sub">手当・助成・支援制度</div>
-        </div>
-      </a>
+/* ===== トップヘッダー ===== */
+.top-header {
+  position: relative;
+  width: 100%;
+  height: 420px;        /* ← PC基準 */
+  /*max-height: 520px;*/
+  overflow: hidden;
+}
 
 
-      <a href="senior.html" class="card card-senior">
-        <div class="card-text">
-         <div class="card-title">高齢者への支援</div>
-         <div class="card-sub">見守り・交流・サポート</div>
-        </div>
-      </a>
-
-      <a href="event.html" class="card card-event">
-        <div class="card-text">
-         <div class="card-title">イベント情報</div>
-         <div class="card-sub">親子・地域イベント</div>
-        </div>
-      </a>
-
-      <a href="facility.html" class="card card-facility">
-        <div class="card-text">
-         <div class="card-title">施設情報</div>
-         <div class="card-sub">遊び場・支援施設</div>
-        </div>
-      </a>
-
-      <a href="consult.html" class="card card-consult">
-        <div class="card-text">
-         <div class="card-title">相談窓口</div>
-         <div class="card-sub">子育て・生活相談</div>
-        </div>
-      </a>
-
-      <a href="app.html" class="card card-app">
-        <div class="card-text">
-         <div class="card-title">子育て支援アプリ</div>
-         <div class="card-sub">公式アプリの紹介</div>
-        </div>
-      </a>
-
-      <a href="qa.html" class="card card-qa">
-        <div class="card-text">
-         <div class="card-title">Q&amp;A</div>
-         <div class="card-sub">よくある質問</div>
-        </div>
-      </a>
-
-      <a href="https://docs.google.com/forms/d/1ZXPENASsnwBdUERA5Nq4E-0TV_JsttZNm61eyW4Nw4c/viewform?edit_requested=true#responses" class="card card-survey" target="_blank" rel="noopener noreferrer">
-        <div class="card-text">
-         <div class="card-title">アンケート</div>
-         <div class="card-sub">アンケートにご協力ください</div>
-        </div>
-      </a>
-
-      <a href="https://www.city.ryugasaki.ibaraki.jp/index.html" class="card card-official" target="_blank" rel="noopener noreferrer">
-        <div class="card-text">
-         <div class="card-title">公式サイト</div>
-         <div class="card-sub">市の公式情報</div>
-        </div>
-      </a>
-
-    </section>
-
-  </main>
-
-  <!-- ===== フッター ===== -->
-  <footer class="footer">
-    © 龍ヶ崎市子育て支援まとめ（高校生制作）
-  </footer>
-  <!-- FC2カウンター ここから -->
-  <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89514549"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=89514549" /></noscript>
-  <!-- FC2カウンター ここまで -->
-  <!-- アクセスカウンター -->
-  <div class="counter">
-      <script async src="https://counter1.fc2.com/counter.php?id=xxxxxx"></script>
-      <noscript><img src="https://counter1.fc2.com/counter_img.php?id=xxxxxx" alt="アクセスカウンター" /></noscript>
-  </div>
-  
-</body>
-</html>
+/* 背景画像（ずれ防止） */
+.top-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background-color: #f4f9f6;
+}
 
 
+/* テキスト全体（位置を固定） */
+.top-text {
+  position: absolute;
+  top: 30%;                  /* ← ここで縦位置を固定 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+.top-text1 {
+  position: absolute;
+  top: 45%;                  /* ← ここで縦位置を固定 */
+  right: 37%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* タイトル文字（自動サイズ調整） */
+.top-text h1 {
+  font-size: clamp(1.4rem, 4vw, 2.6rem);
+  font-weight: bold;
+  color: #2f3a2f;
+  margin-bottom: 8px;
+}
+
+/* 「高校生が作りました！」（安定配置） */
+.made-by {
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  font-weight: bold;
+  color: #4b6f44;
+}
+
+/* ===== メイン ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+/* カード一覧 */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 30px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* カード共通 */
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 正方形を維持 */
+  border-radius: 16px;
+  overflow: hidden;     /* はみ出し防止 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* カード全体をリンクとして安定させる */
+  display: block;              /* ← 超重要 */
+  text-decoration: none;       /* リンク下線消す */
+  color: inherit;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2f3a2f;
+  line-height: 1.2;
+}
 
 
+.card span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  background: rgba(255,255,255,0.8);
+  padding: 4px;
+  border-radius: 8px;
+}
 
+.card-sub {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.2;
+}
 
+.card-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0 12px;
+  background: rgba(255, 255, 255, 0.88);
+  text-align: center;
 
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* ← ここが重要 */
+  z-index: 2; /* ← これで画像より前 */
+}
 
+/* 各カードの背景画像 */
+/* 1 子育て支援 */
+.card-support {
+  background-image: url("../images/support.png");
+  border-top-color: #f4a7b9;
+}
 
+/* 2 高齢者への支援 */
+.card-senior {
+  background-image: url("../images/senior.png");
+  border-top-color: #8bcf9c;
+}
 
+/* 3 イベント情報 */
+.card-event {
+  background-image: url("../images/event.png");
+  border-top-color: #f6b26b;
+}
+
+/* 4 施設情報 */
+.card-facility {
+  background-image: url("../images/facility.png");
+  border-top-color: #8ecae6;
+}
+
+/* 5 相談窓口 */
+.card-consult {
+  background-image: url("../images/consult.png");
+  border-top-color: #6c8ebf;
+}
+
+/* 6 子育て支援アプリ */
+.card-app {
+  background-image: url("../images/app.png");
+  border-top-color: #b6d957;
+}
+
+/* 7 Q&A */
+.card-qa {
+  background-image: url("../images/qa.png");
+  border-top-color: #c9b6e4;
+}
+
+/* 8 アンケート */
+.card-survey {
+  background-image: url("../images/survey.png");
+  border-top-color: #b7b7b7;
+}
+
+/* 9 公式サイト */
+.card-official {
+  background-image: url("../images/official.png");
+  border-top-color: #76c7c0;
+}
+
+.sub-header {
+  background: #f4f8f2;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sub-header h1 {
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  margin-bottom: 8px;
+}
+
+.sub-header p {
+  color: #555;
+}
+/* サブページ用・追加分 */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.content-box h2 {
+  margin-bottom: 10px;
+  color: #2f3a2f;
+}
+
+/* ページトップへ戻るボタン */
+.back-top {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.back-top a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4b6f44;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-top a:hover {
+  background: #3a5a34;
+}
+
+/* ===== フッター ===== */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 600px) {
+
+  .top-header {
+    height: 260px;     /* ← スマホでちょうど良い */
+    max-height: none;
+  }
+
+  .top-text {
+    top: 38%;
+  }
+
+  .top-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .top-text1 {
+    top: 55%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 0.8rem;
+  }
+
+  /* 「高校生が作りました！」 */
+  .made-by {
+    font-size: 0.9rem;
+  }
+
+  /* カード一覧 */
+  .cards {
+    padding: 20px 10px;
+    gap: 14px;
+  }
+
+  /* カード（高さ指定は消す） */
+  .card {
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+  }
+
+  /* カード文字 */
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-sub {
+    font-size: 0.7rem;
+  }
+
+}
 

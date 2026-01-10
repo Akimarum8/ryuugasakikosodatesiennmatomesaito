@@ -58,16 +58,13 @@ body {
 
 /* 「高校生が作りました！」（安定配置） */
 .made-by {
-  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
-  font-weight: bold;
+  font-size: 1rem;
   color: #4b6f44;
-    position: absolute;
-  top: 45%;                  /* ← ここで縦位置を固定 */
-  right: 37%;
-  transform: translate(50%, -50%);
+  position: absolute;
+  right: 10%;
+  top: 38%;
+  width: 320px;
   text-align: center;
-  width: 90%;
-  max-width: 800px;
 }
 
 /* ===== メイン ===== */
@@ -311,6 +308,7 @@ body {
     white-space: normal;
   }
 }
+
 
 
 

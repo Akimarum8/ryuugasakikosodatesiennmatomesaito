@@ -6,19 +6,23 @@ body {
   color: #333;
 }
 
-/* ===== ヘッダー ===== */
+/* ===== トップヘッダー ===== */
 .top-header {
-  position: relative;        /* ← これが超重要 */
+  position: relative;
   width: 100%;
-  height: 100vh;             /* 画面いっぱい */
+  height: 420px;        /* ← PC基準 */
+  /*max-height: 520px;*/
   overflow: hidden;
 }
+
 
 /* 背景画像（ずれ防止） */
 .top-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background-color: #f4f9f6;
 }
 
 /* テキスト全体（位置を固定） */
@@ -34,7 +38,7 @@ body {
 .top-text1 {
   position: absolute;
   top: 45%;                  /* ← ここで縦位置を固定 */
-  right: 23%;
+  right: 37%;
   transform: translate(50%, -50%);
   text-align: center;
   width: 90%;
@@ -263,27 +267,24 @@ body {
 /* ===== スマホ対応 ===== */
 @media (max-width: 600px) {
 
-  /* トップヘッダー */
   .top-header {
-    height: 55vh;        /* ← スマホに最適 */
-    min-height: 320px;   /* ← 小さくなりすぎ防止 */
+    height: 260px;     /* ← スマホでちょうど良い */
+    max-height: none;
   }
 
-  /* メインタイトル */
   .top-text {
-    top: 40%;
+    top: 38%;
   }
 
   .top-text h1 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
-  /* サブテキスト */
   .top-text1 {
     top: 55%;
     right: 50%;
     transform: translate(50%, -50%);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   /* 「高校生が作りました！」 */

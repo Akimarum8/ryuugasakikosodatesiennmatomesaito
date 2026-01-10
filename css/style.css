@@ -283,8 +283,23 @@ body {
     transform: none;
     margin: 12px 0;
     padding: 0 16px;
+    position: absolute;
+    top: 30%;                  /* ← ここで縦位置を固定 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
   }
-
+  .top-text1 {
+  position: absolute;
+  top: 45%;                  /* ← ここで縦位置を固定 */
+  right: 37%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  }
   .top-text p {
     font-size: 1rem;
     white-space: normal;   /* スマホは改行OK */
@@ -299,4 +314,5 @@ body {
     padding: 0 16px;
   }
 }
+
 

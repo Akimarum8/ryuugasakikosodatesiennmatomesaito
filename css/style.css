@@ -272,9 +272,23 @@ body {
     max-height: none;
   }
 
+
+  /* トップ文字全体を中央に固定 */
   .top-text {
-    top: 38%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+
+  /* 「高校生が作りました」だけ個別に調整 */
+  .made-by {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    position: static;   /* ← absoluteを解除 */
+    text-align: center;
+  }
+
+
 
   .top-text h1 {
     font-size: 1.3rem;
@@ -285,11 +299,6 @@ body {
     right: 5%;
     transform: translate(50%, -50%);
     font-size: 0.8rem;
-  }
-
-  /* 「高校生が作りました！」 */
-  .made-by {
-    font-size: 0.9rem;
   }
 
   /* カード一覧 */
@@ -314,5 +323,6 @@ body {
   }
 
 }
+
 
 

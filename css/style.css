@@ -27,7 +27,7 @@ body {
 /* テキスト全体（位置を固定） */
 .top-text {
   position: absolute;
-  top: 40%;                  /* ← ここで縦位置を固定 */
+  top: 35%;                  /* ← ここで縦位置を固定 */
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -36,12 +36,12 @@ body {
 }
 .top-text1 {
   position: absolute;
-  top: 45%;                  /* ← ここで縦位置を固定 */
-  right: 40%;
+  top: 50%;                  /* ← ここで縦位置を固定 */
+  right: auto;
+  left: 50%
   transform: translate(50%, -50%);
   text-align: center;
-  width: 90%;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 /* タイトル文字（自動サイズ調整） */
@@ -307,6 +307,7 @@ body {
     white-space: normal;
   }
 }
+
 
 
 

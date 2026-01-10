@@ -18,7 +18,7 @@
 /* ===== サイト説明（画像下・1行） ===== */
 .top-text {
   position: absolute;
-  bottom: 18px;              /* 画像の下側に固定 */
+  top: 18px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -36,8 +36,8 @@
 /* ===== 吹き出し内：高校生が作りました ===== */
 .made-by {
   position: absolute;
-  right: 10%;
-  top: 36%;
+  right: 40%;
+  top: 38%;
   width: 280px;
   text-align: center;
   font-size: 1rem;
@@ -282,6 +282,7 @@
     padding: 0 16px;
   }
 }
+
 
 
 

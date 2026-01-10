@@ -268,51 +268,35 @@ body {
 /* ===== スマホ対応 ===== */
 @media (max-width: 600px) {
 
+  /* ヘッダー高さを抑える */
   .top-header {
-    height: 260px;     /* ← スマホでちょうど良い */
-    max-height: none;
+    height: auto;
   }
 
+  .top-image {
+    height: auto;
+  }
+
+  /* 画像下テキスト：通常配置 */
   .top-text {
-    top: 38%;
+    position: static;
+    transform: none;
+    margin: 12px 0;
+    padding: 0 16px;
   }
 
-  .top-text h1 {
-    font-size: 1.3rem;
+  .top-text p {
+    font-size: 1rem;
+    white-space: normal;   /* スマホは改行OK */
   }
 
-  .top-text1 {
-    top: 55%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    font-size: 0.8rem;
-  }
-
-  /* 「高校生が作りました！」 */
+  /* 高校生が作りました：吹き出し下に自然配置 */
   .made-by {
-    font-size: 0.9rem;
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    padding: 0 16px;
   }
-
-  /* カード一覧 */
-  .cards {
-    padding: 20px 10px;
-    gap: 14px;
-  }
-
-  /* カード（高さ指定は消す） */
-  .card {
-    aspect-ratio: 1 / 1;
-    border-radius: 12px;
-  }
-
-  /* カード文字 */
-  .card-title {
-    font-size: 0.9rem;
-  }
-
-  .card-sub {
-    font-size: 0.7rem;
-  }
-
 }
 

@@ -78,131 +78,76 @@ body {
   margin: 0 auto;
 }
 
-/* カード共通 */
-.card {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1; /* 正方形を維持 */
-  border-radius: 16px;
-  overflow: hidden;     /* はみ出し防止 */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-/* カード全体をリンクとして安定させる */
-  display: block;              /* ← 超重要 */
-  text-decoration: none;       /* リンク下線消す */
-  color: inherit;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  inset: 0;
-}
-
+/* ホバー時（PC） */
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.card-title {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #2f3a2f;
-  line-height: 1.2;
+/* 押している最中（PCクリック・スマホタップ） */
+.card:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  filter: brightness(0.92);
 }
 
-
-.card span {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-weight: bold;
-  color: #333;
-  background: rgba(255,255,255,0.8);
-  padding: 4px;
-  border-radius: 8px;
+/* カード共通 */
+.card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  color: inherit;
 }
 
-.card-sub {
-  font-size: 0.75rem;
-  color: #666;
-  line-height: 1.2;
-}
-
-.card-text {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 10px 0 12px;
-  background: rgba(255, 255, 255, 0.88);
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  gap: 4px; /* ← ここが重要 */
-  z-index: 2; /* ← これで画像より前 */
-}
-
-/* 各カードの背景画像 */
 /* 1 子育て支援 */
 .card-support {
-  background-image: url("../images/support.png");
-  border-top-color: #f4a7b9;
+  background-image: url("../images/1.png");
 }
 
 /* 2 高齢者への支援 */
 .card-senior {
-  background-image: url("../images/senior.png");
-  border-top-color: #8bcf9c;
+  background-image: url("../images/2.png");
 }
 
 /* 3 イベント情報 */
 .card-event {
-  background-image: url("../images/event.png");
-  border-top-color: #f6b26b;
+  background-image: url("../images/3.png");
 }
 
 /* 4 施設情報 */
 .card-facility {
-  background-image: url("../images/facility.png");
-  border-top-color: #8ecae6;
+  background-image: url("../images/4.png");
 }
 
 /* 5 相談窓口 */
 .card-consult {
-  background-image: url("../images/consult.png");
-  border-top-color: #6c8ebf;
+  background-image: url("../images/5.png");
 }
 
 /* 6 子育て支援アプリ */
 .card-app {
-  background-image: url("../images/app.png");
-  border-top-color: #b6d957;
+  background-image: url("../images/6.png");
 }
 
 /* 7 Q&A */
 .card-qa {
-  background-image: url("../images/qa.png");
-  border-top-color: #c9b6e4;
+  background-image: url("../images/7.png");
 }
 
 /* 8 アンケート */
 .card-survey {
-  background-image: url("../images/survey.png");
-  border-top-color: #b7b7b7;
+  background-image: url("../images/8.png");
 }
 
 /* 9 公式サイト */
 .card-official {
-  background-image: url("../images/official.png");
-  border-top-color: #76c7c0;
+  background-image: url("../images/9.png");
 }
+
 
 .sub-header {
   background: #f4f8f2;
@@ -268,51 +213,51 @@ body {
 /* ===== スマホ対応 ===== */
 @media (max-width: 600px) {
 
-  /* ヘッダー高さを抑える */
   .top-header {
-    height: auto;
+    height: 260px;     /* ← スマホでちょうど良い */
+    max-height: none;
   }
 
-  .top-image {
-    height: auto;
-  }
-
-  /* 画像下テキスト：通常配置 */
   .top-text {
-    position: static;
-    transform: none;
-    margin: 12px 0;
-    padding: 0 16px;
-    position: absolute;
-    top: 30%;                  /* ← ここで縦位置を固定 */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 90%;
-    max-width: 800px;
+    top: 38%;
   }
+
+  .top-text h1 {
+    font-size: 1.3rem;
+  }
+
   .top-text1 {
-  position: absolute;
-  top: 45%;                  /* ← ここで縦位置を固定 */
-  right: 37%;
-  transform: translate(50%, -50%);
-  text-align: center;
-  width: 90%;
-  max-width: 800px;
-  }
-  .top-text p {
-    font-size: 1rem;
-    white-space: normal;   /* スマホは改行OK */
+    top: 55%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 0.8rem;
   }
 
-  /* 高校生が作りました：吹き出し下に自然配置 */
+  /* 「高校生が作りました！」 */
   .made-by {
-    position: static;
-    width: 100%;
-    margin-top: 8px;
-    font-size: 0.85rem;
-    padding: 0 16px;
+    font-size: 0.9rem;
   }
-}
 
+  /* カード一覧 */
+  .cards {
+    padding: 20px 10px;
+    gap: 14px;
+  }
+
+  /* カード（高さ指定は消す） */
+  .card {
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+  }
+
+  /* カード文字 */
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-sub {
+    font-size: 0.7rem;
+  }
+
+}
 
